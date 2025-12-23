@@ -1,2 +1,8 @@
 @import './_reset.css';
-@import './_variables.css';
+@import './_variables.scss';
+
+section {
+  min-height: 120vh;   /* 중요 */
+  padding: 20vh 10vw;
+  border-bottom: 1px dashed rgba(255,255,255,0.2);
+}

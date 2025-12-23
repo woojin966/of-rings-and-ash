@@ -3,7 +3,16 @@
 </template>
 
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
+  import { onMounted, nextTick } from 'vue';
+import { initCommonScroll } from './utils/initCommonScroll';
+
+onMounted(async () => {
+  await nextTick();
+
+  requestAnimationFrame(() => {
+    // initCommonScroll();
+  });
+});
 </script>
 
 <style scoped>

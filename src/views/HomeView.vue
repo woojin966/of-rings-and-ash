@@ -14,6 +14,7 @@
 </template>
 
 <script setup>
+    import { onMounted, nextTick } from 'vue'
     import Header from '@/components/layout/Header.vue'
     import HeroSection from '@/components/sections/HeroSection.vue'
     import Character from '@/components/sections/Character.vue'
@@ -24,4 +25,13 @@
     import Final from '@/components/sections/Final.vue'
     import Footage from '@/components/sections/Footage.vue'
     import Footer from '@/components/layout/Footer.vue'
+    import { initCommonScroll } from '@/utils/initCommonScroll';
+import { initTextHighlight } from '@/utils/initTextHighlight';
+
+onMounted(async () => {
+  await nextTick();
+  // initCommonScroll();
+  // initTextHighlight();
+});
+
 </script>
